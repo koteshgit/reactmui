@@ -118,14 +118,16 @@ class CaseList extends Component {
                                   <Label>Role Assignment</Label>
                                 </Col>
                               </FormGroup>
-                              <Table responsive bordered>
+                              <Table responsive hover>
                                 <thead><tr><th>Role Name</th><th>Users</th><th>Groups</th></tr></thead>
-                                <tr><td>manager</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
-                                <tr><td>supplier</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
-                                <tr><td>developer</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
-                                <tr><td>user</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
-                                <tr><td>requestor</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
-                                <tr><td>lead</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                <tbody>
+                                  <tr><td>manager</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                  <tr><td>supplier</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                  <tr><td>developer</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                  <tr><td>user</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                  <tr><td>requestor</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                  <tr><td>lead</td><td><Input type="text" name="case-owner" id="case-owner"/> </td><td><Input type="text" name="case-owner" id="case-owner"/></td></tr>
+                                </tbody>
                               </Table>
                             </Form>
                           </ModalBody>

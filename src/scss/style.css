@@ -9905,3 +9905,15 @@ Modal{
   -webkit-box-shadow: 0 6px 6px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
   box-shadow: 0 6px 6px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
 }
+
+.pull-left{
+  text-align: left !important
+}
+
+.pull-right{
+  text-align: right !important
+}
+
+.ta-center{
+  text-align: center;
+}
