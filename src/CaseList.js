@@ -58,7 +58,8 @@ class CaseList extends Component {
                             <tr><th>CASE</th><th>CATEGORY</th><th>SUB-CATEGORY</th><th>CASE DATE</th><th>STATUS</th><th>Entity/Initiator</th><th>Entity/Initiator Name</th><th>REAPEAT CALLER</th><th>COMPLIANT INDICATOR</th><th>ACTION</th></tr></thead>
                             <tbody>
                               <tr><td><Button className="tsIndxButton" href="#/CaseDetails" color="link">00001015</Button></td><td>Claims</td><td>Email</td><td>10/19/2018 2:30AM</td><td>Open</td><td>IT Hardware</td><td>rhpamadmin</td><td></td><td></td><td><Button className="tsIndxButton" color="warning">Complete</Button></td></tr>
-                              <tr><td><Button className="tsIndxButton" href="#/CaseDetails" color="link">00001217</Button></td><td>Dental</td><td>Alternate Medicine</td><td>10/19/2018 2:30AM</td><td>Assigned</td><td>IT Hardware</td><td>rhpamadmin</td><td></td><td></td><td><Button className="tsIndxButton" color="warning">Complete</Button></td></tr>
+                              <tr><td><Button className="tsIndxButton" href="#/CaseDetails" color="link">00001217</Button></td><td>Dental</td><td>Alternate Medicine</td><td>10/19/2018 2:30AM</td><td>In Progress</td><td>IT Hardware</td><td>rhpamadmin</td><td></td><td></td><td><Button className="tsIndxButton" color="warning">Complete</Button></td></tr>
+                              <tr><td><Button className="tsIndxButton" href="#/CaseDetails" color="link">00001218</Button></td><td>Dental</td><td>Alternate Medicine</td><td>10/19/2018 3:30AM</td><td>Assigned</td><td>IT Hardware</td><td>rhpamadmin</td><td></td><td></td><td><Button className="tsIndxButton" color="info">Assign</Button></td></tr>
                             </tbody>
                         </Table>
                       <Pagination>
