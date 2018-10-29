@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
-import search1 from './search1.png';
+import { Card, CardBody, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
 class TaskAssignment extends Component {
   constructor(props){
     super(props);
@@ -56,7 +55,4 @@ class TaskAssignment extends Component {
   }
   
 }
-const style = {
-  margin: 15,
-};
 export default TaskAssignment;

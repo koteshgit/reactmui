@@ -75,7 +75,6 @@ class CreateTask extends Component {
     }
     console.log("Creating task");
     var uploadScreen=[];
-    var loginPage=[];
     //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
   //  alert("setting dashboard");
     uploadScreen.push(<MuiDashboard appContext={self.props.appContext}/>)
@@ -84,7 +83,7 @@ class CreateTask extends Component {
     axios.post(apiBaseUrl+'login', payload)
    .then(function (response) {
      console.log(response);
-     if(response.data.code == 200){
+     if(response.data.code === 200){
        console.log("Login successfull");
        var uploadScreen=[];
        //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
@@ -93,7 +92,7 @@ class CreateTask extends Component {
        self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
        alert("self.props.appContext.state0" +  self.props.appContext.state);
      }
-     else if(response.data.code == 204){
+     else if(response.data.code === 204){
        console.log("Username password do not match");
        alert(response.data.success)
      }
@@ -108,7 +107,7 @@ class CreateTask extends Component {
   }
 }
 
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 export default CreateTask;

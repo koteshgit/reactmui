@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
+import { Card, CardBody, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
 class ApproveInbox extends Component {
   constructor(props){
     super(props);
@@ -50,9 +50,8 @@ class ApproveInbox extends Component {
      </div>
     );
   }
-  
 }
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 export default ApproveInbox;

@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import MuiDashboard from '../../../MuiDashboard';
 import Register from '../Register';
-import { DefaultLayout } from '../../../containers';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 var apiBaseUrl = "http://localhost:4000/api/";
+apiBaseUrl = 'http://dbpm-lp1.systems.emplemhealth.com/kie-server/services/rest/server';
 class Login extends Component {
   constructor(props){
     super(props);
     this.state={
       username:'',
-      password:''
+      password:'',
+      role:''
     }
   }
   render() {
@@ -70,31 +71,30 @@ class Login extends Component {
   }
   handleClick(event){
     var self = this;
-    var payload={
-      "userid":this.state.username,
-      "password":this.state.password,
-      "role":this.state.loginRole
-    }
-    console.log("Login successfull");
-    var uploadScreen=[];
-    //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
-  //  alert("setting dashboard");
-    uploadScreen.push(<MuiDashboard appContext={self.props.appContext}/>)
-    self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
-    // alert("self.props.appContext.state0" +  self.props.appContext.state);
-    axios.post(apiBaseUrl+'login', payload)
-   .then(function (response) {
+    var username = 'shashi';
+    var password = 'Admin@123';
+    var basicAuth = btoa(username+':'+password);
+    
+    var axiosConfig = {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json', 
+        'Authorization': basicAuth
+      }
+    };
+    console.log("Calling login Api");
+    axios.get(apiBaseUrl+'', axiosConfig)
+    .then(function (response) {
      console.log(response);
-     if(response.data.code == 200){
-       console.log("Login successfull");
-       var uploadScreen=[];
-       //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
-      alert("setting dashboard");
-       uploadScreen.push(<DefaultLayout/>)
-       self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
-       alert("self.props.appContext.state0" +  self.props.appContext.state);
+     if(response.status === 200){
+        console.log("Login successfull");
+        var uploadScreen=[];
+        console.log("Navigating to Dashboard");
+        self.props.appContext.setState({role:'Supe User'})
+        uploadScreen.push(<MuiDashboard appContext={self.props.appContext}/>)
+        self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
      }
-     else if(response.data.code == 204){
+     else if(response.data.code === 204){
        console.log("Username password do not match");
        alert(response.data.success)
      }
@@ -124,7 +124,7 @@ class Login extends Component {
     axios.post(apiBaseUrl+'login', payload)
    .then(function (response) {
      console.log(response);
-     if(response.data.code == 200){
+     if(response.data.code === 200){
        console.log("Login successfull");
        var uploadScreen=[];
        //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
@@ -133,7 +133,7 @@ class Login extends Component {
        self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
        alert("self.props.appContext.state0" +  self.props.appContext.state);
      }
-     else if(response.data.code == 204){
+     else if(response.data.code === 204){
        console.log("Username password do not match");
        alert(response.data.success)
      }

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-//import AppBar from 'material-ui/AppBar';
-// import RaisedButton from 'material-ui/RaisedButton';
-// import TextField from 'material-ui/TextField';
 // import axios from 'axios';
 import user from './user.png';
 import fa from './flagAvailable.png';
@@ -15,12 +11,10 @@ import plus from './plus.png';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import search1 from './search1.png';
-import { BrowserRouter as Router, Route, BrowserRouter,  Switch, Redirect, HashRouter, Link } from 'react-router-dom';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
+import { BrowserRouter as Link } from 'react-router-dom';
+import { Card, CardBody, CardHeader, Col, Row, Button} from 'reactstrap';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -70,7 +64,7 @@ class CaseDetails extends Component {
                       <ExpansionPanel expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
                         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                           <Typography className={classes.heading}>Order for IT Hardware(rphadadmin)</Typography>
-                          <Typography className={classes.secondaryHeading}>Overview</Typography>
+                          <Typography className={classes.secondaryHeading}>Overview for the Order for IT Hardware</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                           <Typography>
@@ -87,7 +81,7 @@ class CaseDetails extends Component {
                               </td>
                               <td colspan="3">
                                 <table width="100%">
-                                  <tr><td class="cdTd"><span class="cdTdHd"><img class="user" src={fa} align="top" height="25px"/>Available 4</span><hr/></td><td><span class="cdTdHd"><img class="user" src={fi} align="top" height="25px"/>In Progress 4</span><hr/></td><td><span class="cdTdHd"><img class="user" src={fc} align="top" height="25px"/>Complete 0</span><hr/></td></tr>
+                                  <tr><td class="cdTd"><span class="cdTdHd"><img class="user" alt='' src={fa} align="top" height="25px"/>Available 4</span><hr/></td><td><span class="cdTdHd"><img class="user" alt='' src={fi} align="top" height="25px"/>In Progress 4</span><hr/></td><td><span class="cdTdHd"><img class="user" alt='' src={fc} align="top" height="25px"/>Complete 0</span><hr/></td></tr>
                                   <tr><td class="cdTd"><span class="cdTdHd">New user task</span><br/>Dynamic</td><td class="cdTd"><span class="cdTdHd">Prepare hardware spec</span><br/>21/08/2018(Human task)</td><td>No Actions found</td></tr>
                                   <tr><td class="cdTd"><span class="cdTdHd">New process task</span><br/>Dynamic</td><td class="cdTd"><span class="cdTdHd">Milestone1: Order places</span><br/>21/08/2018(Milestone)</td><td></td></tr>
                                   <tr><td class="cdTd"><span class="cdTdHd">Milestone2: Order Shipped</span><br/>Dynamic</td><td class="cdTd"><span class="cdTdHd">Hardware spec ready</span><br/>21/08/2018(Milestone)</td><td></td></tr>
@@ -107,11 +101,11 @@ class CaseDetails extends Component {
                         <ExpansionPanelDetails>
                           <Typography>
                           <table width="100%">
-                            <tr><td class="cdTd"><img class="user" src={fm} align="top" height="25px"/>Hartware spec ready</td></tr>
-                            <tr><td class="cdTd"><img class="user" src={fm} align="top" height="25px"/>Manager Decision</td></tr>
-                            <tr><td class="cdTd"><img class="user" src={fm} align="top" height="25px"/>Milestone1: Order placed</td></tr>
-                            <tr><td class="cdTd"><img class="user" src={fm} align="top" height="25px"/>Milestone2: Order Shipped</td></tr>
-                            <tr><td class="cdTd"><img class="user" src={fm} align="top" height="25px"/>Milestone3: Delivered to customer</td></tr>
+                            <tr><td class="cdTd"><img class="user" src={fm} alt='' align="top" height="25px"/>Hartware spec ready</td></tr>
+                            <tr><td class="cdTd"><img class="user" src={fm} alt='' align="top" height="25px"/>Manager Decision</td></tr>
+                            <tr><td class="cdTd"><img class="user" src={fm} alt='' align="top" height="25px"/>Milestone1: Order placed</td></tr>
+                            <tr><td class="cdTd"><img class="user" src={fm} alt='' align="top" height="25px"/>Milestone2: Order Shipped</td></tr>
+                            <tr><td class="cdTd"><img class="user" src={fm} alt='' align="top" height="25px"/>Milestone3: Delivered to customer</td></tr>
                           </table>
                           </Typography>
                         </ExpansionPanelDetails>
@@ -127,7 +121,7 @@ class CaseDetails extends Component {
                           <Typography>
                             <table width="100%">
                               <tr><td class="cdTd" width="95%">
-                              <div class="margin10 pull-left"><img class="user" src={user} align="middle" height="40px"/><input type='text' class="txtComment"/><label><Link to={`./AddComment`} className="link pull-right"><img src={plus} title="Comment" align="middle" height="25px"/></Link></label></div></td><hr/></tr>
+                              <div class="margin10 pull-left"><img class="user" alt='' src={user} align="middle" height="40px"/><input type='text' class="txtComment"/><label><Link to={`./AddComment`} className="link pull-right"><img alt='' src={plus} title="Comment" align="middle" height="25px"/></Link></label></div></td><hr/></tr>
                               <tr><td class="cdTd">No Comments found</td></tr>
                             </table>
                           </Typography>
@@ -164,7 +158,5 @@ class CaseDetails extends Component {
 CaseDetails.propTypes = {
   classes: PropTypes.object.isRequired,
 };
-const style = {
-  margin: 15,
-};
+
 export default withStyles(styles)(CaseDetails);

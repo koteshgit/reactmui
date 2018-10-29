@@ -89,7 +89,7 @@ class Register extends Component {
     axios.post(apiBaseUrl+'login', payload)
    .then(function (response) {
      console.log(response);
-     if(response.data.code == 200){
+     if(response.data.code === 200){
        console.log("Login successfull");
        var uploadScreen=[];
        //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
@@ -98,7 +98,7 @@ class Register extends Component {
        self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
        alert("self.props.appContext.state0" +  self.props.appContext.state);
      }
-     else if(response.data.code == 204){
+     else if(response.data.code === 204){
        console.log("Username password do not match");
        alert(response.data.success)
      }

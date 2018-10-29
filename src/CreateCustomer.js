@@ -5,27 +5,15 @@ import React, { Component } from 'react';
 // import TextField from 'material-ui/TextField';
 // import axios from 'axios';
 import {
-  Badge,
   Button,
-  ButtonDropdown,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
   Col,
-  Collapse,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Fade,
   Form,
   FormGroup,
-  FormText,
-  FormFeedback,
   Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
   Label,
   Row,
 } from 'reactstrap';
@@ -119,7 +107,7 @@ class CreateCustomer extends Component {
   }
    
 }
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 export default CreateCustomer;

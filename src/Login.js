@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MuiDashboard from './MuiDashboard';
-import Dashboard from './Dashboard';
 import { DefaultLayout } from './containers';
-import { withStyles } from 'material-ui/styles';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import DropDownMenu from 'material-ui/DropDownMenu';
@@ -47,8 +44,8 @@ class Login extends Component {
   }
   componentWillMount(){
   // console.log("willmount prop values",this.props);
-  if(this.props.role != undefined){
-    if(this.props.role == 'requsetor'){
+  if(this.props.role !== undefined){
+    if(this.props.role ==='requsetor'){
       console.log("in requsetor componentWillMount");
       var localloginComponent=[];
       localloginComponent.push(
@@ -72,10 +69,8 @@ class Login extends Component {
          </MuiThemeProvider>
       )
       this.setState({menuValue:1,loginComponent:localloginComponent,loginRole:'requsetor'})
-    }
-    else if(this.props.role == 'approver'){
+    }else if(this.props.role === 'approver'){
       console.log("in approver componentWillMount");
-      var localloginComponent=[];
       localloginComponent.push(
         <MuiThemeProvider>
           <div>
@@ -117,7 +112,7 @@ class Login extends Component {
     axios.post(apiBaseUrl+'login', payload)
    .then(function (response) {
      console.log(response);
-     if(response.data.code == 200){
+     if(response.data.code === 200){
        console.log("Login successfull");
        var uploadScreen=[];
        //uploadScreen.push(<UploadPage appContext={self.props.appContext} role={self.state.loginRole}/>)
@@ -126,7 +121,7 @@ class Login extends Component {
        self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
        alert("self.props.appContext.state0" +  self.props.appContext.state);
      }
-     else if(response.data.code == 204){
+     else if(response.data.code === 204){
        console.log("Username password do not match");
        alert(response.data.success)
      }
@@ -166,8 +161,7 @@ class Login extends Component {
          </MuiThemeProvider>
       )
     }
-    else if(value == 2){
-      var localloginComponent=[];
+    else if(value === 2){
       loginRole='approver';
       localloginComponent.push(
         <MuiThemeProvider>

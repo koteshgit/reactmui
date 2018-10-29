@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
+import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 class TaskDetails extends Component {
   constructor(props){
     super(props);
@@ -39,7 +39,6 @@ class TaskDetails extends Component {
                 <td class="valueTd"><input type="text"
                   hintText="Task Name"
                   placeholder="Task Name"
-                  type="text"
                   floatingLabelText="Task Name"
                   onChange = {(event,newValue) => this.setState({task_Name:newValue})}
                   /></td></tr>

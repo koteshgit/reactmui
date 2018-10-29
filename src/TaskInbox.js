@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
+import { Card, CardBody, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
 
 class TaskInbox extends Component {
   constructor(props){
@@ -57,7 +57,7 @@ class TaskInbox extends Component {
   }
   
 }
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 export default TaskInbox;

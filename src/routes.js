@@ -7,10 +7,10 @@ function Loading() {
   return <div>Loading...</div>;
 }
 
-const Breadcrumbs = Loadable({
-  loader: () => import('./views/Base/Breadcrumbs/Breadcrumbs'),
-  loading: Loading,
-});
+// const Breadcrumbs = Loadable({
+//   loader: () => import('./views/Base/Breadcrumbs/Breadcrumbs'),
+//   loading: Loading,
+// });
 const Dashboard = Loadable({
   loader: () => import('./views/Dashboard'),
   loading: Loading,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
-import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Button, Table } from 'reactstrap';
+import { Card, CardBody, CardHeader, Col, Row, Button} from 'reactstrap';
 class CnrInprogress extends Component {
   constructor(props){
     super(props);
@@ -39,7 +39,7 @@ class CnrInprogress extends Component {
   }
    
 }
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 export default CnrInprogress;

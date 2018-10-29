@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Col,Row, Button, Table } from 'reactstrap';
+import { Col,Row} from 'reactstrap';
 class Settings extends Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
   render() {
     return (
       <div>
@@ -36,8 +36,8 @@ class Settings extends Component {
   }
   
 }
-const style = {
-  margin: 15,
-};
+// const style = {
+//   margin: 15,
+// };
 
 export default Settings;
