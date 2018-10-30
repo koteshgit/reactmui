@@ -197,7 +197,8 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
+  text-align: inherit;
+ }
 
 label {
   font-weight: bolder;
@@ -7606,7 +7607,7 @@ button {
 
 .card-header-actions {
   display: inline-block;
-  float: right;
+  /* float: right; */
   margin-right: -0.25rem; }
 
 .card-header-action {
@@ -9840,7 +9841,7 @@ body {
       right: auto;
       left: 10px; }
 
-.ie-custom-properties {
+/* .ie-custom-properties {
   blue: #20a8d8;
   indigo: #6610f2;
   purple: #6f42c1;
@@ -9866,7 +9867,7 @@ body {
   breakpoint-sm: 576px;
   breakpoint-md: 768px;
   breakpoint-lg: 992px;
-  breakpoint-xl: 1200px; }
+  breakpoint-xl: 1200px; } */
 
 .app-header .navbar-nav .dropdown-menu-right {
   right: auto; }
@@ -9916,4 +9917,16 @@ Modal{
 
 .ta-center{
   text-align: center;
+}
+
+main{
+  background-color: #ffffff;
+}
+
+td{
+  vertical-align: middle !important;
+}
+
+.pdl-15{
+  padding-left: 15px !important;
 }

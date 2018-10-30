@@ -32,12 +32,12 @@ class DefaultHeader extends Component {
           <NavItem className="px-3">
             <NavLink href="#/dashboard">Dashboard</NavLink>
           </NavItem>
-          <NavItem className="px-3">
+          {/* <NavItem className="px-3">
             <NavLink href="#/users">Users</NavLink>
           </NavItem>
           <NavItem className="px-3">
             <NavLink href="#/Settings">Settings</NavLink>
-          </NavItem>
+          </NavItem> */}
         </Nav>
         <Nav className="ml-auto" navbar>
           <AppHeaderDropdown direction="down">
