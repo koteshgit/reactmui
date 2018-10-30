@@ -49,8 +49,8 @@ class CaseList extends Component {
                     <Col md="3"><h3>Cases</h3></Col>
                     <Col md="9" className="pull-right"><input type='text'/><Button className="tsIndxButton" color="primary">Search</Button></Col>
                   </Row>
-                  <br/>
-                  <Table size="sm" hover bordered>
+                  <hr/>
+                  <Table size="sm" hover borderless>
                     <thead>
                     <tr><th className="pdl-15">Case</th><th>Category</th><th>Sub-Category</th><th>Case Date</th><th>Status</th><th>Entity/Initiator</th><th>Entity/Initiator Name</th><th>Repeate Caller</th><th>Complaint Indicator</th><th>Action</th></tr></thead>
                     <tbody>

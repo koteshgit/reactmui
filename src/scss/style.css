@@ -9930,3 +9930,28 @@ td{
 .pdl-15{
   padding-left: 15px !important;
 }
+.table-hover{
+  box-shadow: 5px 5px 5px #888;
+  border: 0.5px solid #ccc;
+}
+
+input{
+  border-radius: 5px !important;
+  box-shadow: 5px 3px 3px #ccc !important;
+  border: 0.5px solid #888;
+  height: 30px;
+}
+
+input:hover{
+  background-color: #eedf8a;
+}
+
+thead{
+  background-color: #000;
+  color: #fff;
+}
+
+tr{
+  border-bottom: 0.5px solid  #ccc;
+  height: 20px !important;
+}
